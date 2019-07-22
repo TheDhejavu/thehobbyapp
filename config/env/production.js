@@ -18,7 +18,7 @@
  * For more best practices and tips, see:
  * https://sailsjs.com/docs/concepts/deployment
  */
-
+require('dotenv').config()
 module.exports = {
 
 
@@ -71,6 +71,9 @@ module.exports = {
       *                                                                           *
       ****************************************************************************/
       // ssl: true,
+
+      adapter: 'sails-mongo',
+      url: process.env.MONGODB_URL
 
     },
 
@@ -322,7 +325,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
