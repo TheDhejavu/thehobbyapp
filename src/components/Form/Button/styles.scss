@@ -1,0 +1,44 @@
+@import "../../../styles/common.scss";
+
+.btn{
+      display:inline-block;
+      margin:5px;
+      border-radius:70px;
+      border:none;
+      box-shadow: 0 2px 5px 0 rgba(0, 0,0, 0.09);
+      transition: box-shadow 0.2s ease 0s, opacity 0.2s ease 0s;
+      cursor:pointer;
+      text-align:center;
+      font-family:$primary-font-family;
+     
+  }
+  .reset-btn{
+    margin:0;
+    padding:0;
+    background:none;
+    box-shadow:none;
+  }
+  .dash-size-btn{
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      padding: 22px 26px 19px;
+      font-weight:700;
+  }
+  .big-btn{
+      font-weight:600;
+      box-shadow:0 1px 8px 0 rgba(0,0,0,.13);
+      padding:13px 20px;
+      font-size:1rem;
+      font-weight:600;
+ }
+ .small-btn{
+    font-weight:400;
+    border-radius:50px;
+    padding:8px 20px;
+    box-shadow:0 1px 8px 0 rgba(0,0,0,.13);
+ }
+
+ .btn:disabled{
+  cursor:not-allowed;
+  opacity:0.6;
+ }

@@ -1,0 +1,57 @@
+@import "../../styles/common.scss";
+
+.sidebar{
+    .sidebar-panel{
+      padding:0;
+      position:relative;
+      height:100vh;
+    }
+    .logo-container{
+      padding:15px 10px;
+      font-weight:500;
+      // box-shadow:0 2px 15px 0 rgba(0,0,0,0.05)
+    }
+    .create-btn{
+      padding:15px 0;
+      margin:20px 10px;
+      width:90%;
+      // color:$primary-color;
+      i{
+        font-size:1.1rem;
+      }
+    }
+
+    .sidebar-nav{
+      padding:0 0;
+
+      .nav-lists__bottom{
+        position:relative;
+        bottom:0;
+      }
+      li{
+        display:block;
+        a{
+          display:block;
+
+          font-weight:600;
+          padding:10px 16px;
+          margin:5px 0;
+          font-size:1rem;
+          letter-spacing:0.01rem;
+          transition: all 0.5s ease-in;
+          i{
+            font-size:1.5rem;
+            position: relative;
+            bottom:-1px;
+            padding-right:3px;
+          }
+          &:hover{
+            color:$primary-color;
+          }
+        }
+        a.active{
+          border-left:3px solid $primary-color;
+        }
+      }
+    }
+  }

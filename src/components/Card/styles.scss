@@ -1,0 +1,45 @@
+@import "../../styles/common.scss";
+
+.card{
+    background:#fff;
+    border-radius:6px;
+    margin:10px;
+    box-shadow:0 3px 5px 0 rgba(0,0,0,0.07);
+    min-height:60px;
+    .top{
+      position:relative;
+      padding:10px 2px;
+      border-bottom:1px solid rgba(0,0,0,0.01);
+      .created_date{
+        font-weight:500;
+        font-size:0.7rem;
+        padding:7px;
+        border-radius:6px 6px 0 0;
+        border-bottom: 1px solid $bg-primary-color
+      }
+      .btn{
+        top:0;
+        font-size:1.2rem;
+        color:#000;
+        background:none;
+        border:none;
+        padding:5px 3px;
+        transition:.1s cubic-bezier(.4,1,.75,.9);
+        border-radius:100%;
+        cursor:pointer;
+        &:hover{
+          background:$bg-primary-color;
+        }
+        &:focus{
+          border:1px solid #eee;
+        }
+      }
+
+    }
+
+    .hobby{
+      font-size:1rem;
+      font-weight:600;
+      padding:14px 12px;
+    }
+}

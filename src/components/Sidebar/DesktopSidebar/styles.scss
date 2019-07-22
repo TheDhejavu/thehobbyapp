@@ -1,0 +1,40 @@
+@import "../../../styles/common.scss";
+
+.desktop-sidebar{
+  background:#fff;
+  position:relative;
+  width:250px;
+  height:100vh;
+  position: fixed;
+  z-index: 1;
+  box-shadow:0 10px 20px 0 rgba(0,0,0,0.08);
+  z-index: 999;
+  transition: transform .3s ease-out;
+  transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1);
+  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1);
+  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1), -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1);
+  transition: all 0.5s ease 0s;
+  @include MQ($breakpoint-md){
+    display:none;
+  }
+}
+.minimal-view{
+  .desktop-sidebar{
+    width:80px;
+    .will-leave{
+      opacity:0;
+      visibility: hidden;
+      position:absolute;
+    }
+
+    .create-btn{
+      margin:20px 3px;
+
+      i{
+        font-size:1.4rem;
+        padding:0;
+        margin:0;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../styles/common.scss";
+
+.app-header{
+  height:70px;
+  left: 0px;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  // background:$bg-primary-gradient;
+  width: calc(100% - 250px);
+  z-index: 99;
+  left:250px;
+  box-shadow:0 5px 10px 0 rgba(0,0,0,0.03);
+  @include MQ($breakpoint-lg){
+      left:0;
+      width:100%;
+  }
+    @include MQ($breakpoint-md){
+      background:#fff;
+      box-shadow:0 4px 7px 0 rgba(0,0,0,0.07);
+    }
+    .app-header__panel{
+      display:block;
+      position:relative;
+    }
+    .app-header__left{
+      padding:2px 10px;
+      @include MQ($breakpoint-md){
+        padding:10px 5px;
+      }
+      .harmburger-btn{
+        padding:7px;
+        border:none;
+        font-size:1.8rem;
+        cursor:pointer;
+        color:#fff;
+        transition:0.233s cubic-bezier(0.215, 0.610, 0.355, 1);
+        display:none;
+        &:hover{
+          background:rgba(255,255,255,0.3);
+        }
+      }
+      .mobile.harmburger-btn{
+        @include MQ($breakpoint-md){
+          display:block;
+          color:#000;
+        }
+      }
+      .desktop.harmburger-btn{
+        @include MQ($breakpoint-md, 2000px){
+          display:block;
+        }
+      }
+    }
+    .app-header__nav{
+      padding:10px;
+      li.list{
+        display:inline-block;
+        a.link{
+          display:block;
+          padding:6px;
+          font-size:1.5rem;
+          position:relative;
+          top:-10px;
+          transition: all ease-in;
+          opacity:0.5;
+          &:hover{
+            opacity:1;
+          }
+        }
+
+      }
+      li.profile{
+        padding:0 10px;
+        border-radius:50px;
+        position:relative;
+        cursor:pointer;
+        top:1px;
+        .name{
+          font-weight:400;
+          font-size:1rem;
+          color:#fff;
+          padding:10px 0;
+          display:block;
+        }
+        .profile-image{
+          width:40px;
+          height:40px;
+          border-radius:100%;
+          padding:4px;
+        }
+      }
+    }
+  }
+
+  .minimal-view{
+    .app-header{
+      width: calc(100% - 80px);
+      z-index: 99;
+      left:80px;
+      @include MQ($breakpoint-md){
+        width: 100%
+        ;
+        left:0;
+      }
+    }
+  }
